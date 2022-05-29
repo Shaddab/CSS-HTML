@@ -1,42 +1,11 @@
-/* element selector priority specific to element */
-
 body {
-  font-size: 22px;
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    background-color: rgb(202, 177, 138);
+    color: rgb(0,0,0);
 }
 
 p {
-  color: blueviolet;
-}
-
-/* group selector */
-
-h1, h2 {
-  color: wheat;
-}
-
-/*better use class*/
-p span {
-  text-transform: uppercase;
-  background-color: gold;
-}
-
-.highlight {
-  text-transform: uppercase;
-  background-color: lemonchiffon;
-}
-
-/* class selector priority over element selector */
-
-.gray {
-  color: gray;
-}
-
-.red {
-  color: red;
-}
-
-/* id selector not good parctice */
-
-#second {
-  font-style: italic;
+    color: #333;
 }
