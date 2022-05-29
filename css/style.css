@@ -1,14 +1,5 @@
-/* we shouldnot make default font-size in header we should give advantage to user by making changes as per their browser 
+/* bordex-box calculates width by adding padding + content + border whereas content-box only gives total width of content only  */
 
-header {fontsize: 16px;} */
-/* 
-px, rem, em
-16px is default size
-rem is relative to pixel 2 times pixel is 2rem
-em is same as rem 2em is rem */
-
-
-/* universal selector */
 * {
     margin: 0;
     padding: 0;
@@ -17,35 +8,7 @@ em is same as rem 2em is rem */
 
 h1 {
     border: 2px dashed red;
-    /* width is relative to heaader 100 of header is 100/50 of width */
-    width: 50%;
+    width: 400px;
     font-size: 3rem;
-    /* we use em is selected area gemerally use rem*/
-    padding: 0.5em
-}
-
-/* consider we put vw at body but it will create problem if the content grows creating scroll bar at bottom  */
-/* use % instead of vw to remove scrollbar at bottom */
-
-/* Also body 100% is default by browser */
-
-/* To create full width and height of page use vw and vh */
-body {
-    /* width: 100vw; */
-
-    /* use min-height even if we don't have conetnt */
-    min-height: 100vh;
-    background-color: aqua;
-}
-
-/* showing margin area using viewport */
-main {
-    /* width: 50vw;
-    background-color: aqua; */
-    font-size: 2rem;
-}
-/* ch is another unit used to wrap structure */
-p {
-    font-size: 2rem;
-    width: 40ch;
+    padding: 0.5em;
 }
