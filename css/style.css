@@ -1,50 +1,42 @@
-/* universal selector */
-
-* {
- font-family: monospace;   
-}
-
-
-/* element selector */
+/* element selector priority specific to element */
 
 body {
-    font-size: 22px;
+  font-size: 22px;
 }
 
 p {
-    color:blueviolet;
+  color: blueviolet;
 }
-
 
 /* group selector */
 
 h1, h2 {
-    color: wheat;
+  color: wheat;
 }
 
 /*better use class*/
 p span {
-    text-transform: uppercase;
-    background-color: gold;
+  text-transform: uppercase;
+  background-color: gold;
 }
 
 .highlight {
-    text-transform: uppercase;
-    background-color: lemonchiffon;
+  text-transform: uppercase;
+  background-color: lemonchiffon;
 }
 
-/* class selector */
+/* class selector priority over element selector */
 
 .gray {
-    color: gray;
+  color: gray;
 }
 
 .red {
-    color: red;
+  color: red;
 }
 
 /* id selector not good parctice */
 
 #second {
-    font-style: italic;
+  font-style: italic;
 }
