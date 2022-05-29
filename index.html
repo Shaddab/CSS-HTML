@@ -1,25 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-    <!--internal method-->
+  <body>
+    <header>
+      <h1>CSS Selector</h1>
+    </header>
 
-    <style>
-        p {
-            font-size: 38px;
-            color: blueviolet;
-        }
-    </style>
+    <main>
+      <article>
+        <h2>Article 1</h2>
+        <p>
+          I am learning CSS. I am learning CSS. I am learning CSS. I am learning
+          CSS. I am learning CSS. I am learning CSS. I am learning CSS.
+        </p>
 
-</head>
-<body>
-    <!--inline method-->
-    I am learning CSS!
-    <p style="color: limegreen">I am learning CSS!</p>
-</body>
+        <h2>Article 2</h2>
+        <p id="second" class="gray">
+          I am learning CSS. I am learning CSS. I am learning CSS. I am learning
+          CSS. I am learning CSS. I am learning CSS. I am learning <span>css</span>.
+        </p>
+
+        <h2>Article 3</h2>
+        <p class="red">
+          I am learning CSS. I am learning CSS. I am learning CSS. I am learning
+          CSS. I am learning CSS. I am learning CSS. I am <span class="highlight">learning</span> CSS.
+        </p>
+      </article>
+    </main>
+  </body>
 </html>
