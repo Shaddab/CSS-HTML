@@ -2,37 +2,46 @@
 body {
     font-size: 1.5rem;
     font-family: Arial, Helvetica, sans-serif;
+} 
+
+.columns {
+    /* column-count: 4;
+    column-width: 250px; */
+/* same as count-width */
+/* if width 250px available then only draws 4 column */
+    columns: 4 250px;
+    column-rule: 3px solid #333;
+    column-gap: 3rem;
 }
 
-.block {
-    width: 30vw;
-    height: 30vw;
-    background-color: #000;
-    color: aliceblue;
+/* to remove first column margin */
+
+.columns p {
+    margin-top: 0;
+}
+
+.columns h2 {
+    margin-top: 0;
+    background-color: #333;
+    color: #fff;
     padding: 1rem;
+    /* help us to not break h2 in two parts */
+    break-inside: avoid;
+    /* for very small area it will shrink the entire to maintain the column */
+    break-before: column;
 }
 
-.left {
-    float: left;
-    margin-right: 1rem ;
-}
-.right {
-    float: right;
-    margin-left: 1rem ;
-}
-
-/* to align paragraph */
-
-.clear {
-    clear: both;
+.columns .quote {
+    font-size: 3rem;
+    text-align: center;
+    color: #333;
+    /*show on all columns   */
+    column-span: all;
+    margin-top: 2rem;
 }
 
-section {
-    background-color: bisque;
-    padding: 1rem;
-    border: 1px solid #333;
-    /* legacy method */
-    /* overflow: auto; */
-    /* current way bt MDN */
-    display: flow-root;
+/* help us to not break span class*/
+
+.nowrap {
+    white-space: nowrap;
 }
