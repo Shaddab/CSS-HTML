@@ -6,20 +6,40 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
-/* input, button {
-    font: inherit;
-} */
 
-p {
-    text-decoration: line-through;
-    text-transform: capitalize;
-    text-align: justify;
-    text-indent: 2em;
-    line-height: 1.5;
-    letter-spacing: 0.2em;
-    word-spacing: 0.3em;
+/* styling in anchor  */
+/* default style no need to write */
 
-    font-weight: 500;
 
-    font-style: normal;
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: blue;
+}
+
+/* to make Underline color also comment out the above element to work */
+a {
+    color: steelblue;
+}
+
+
+/* psyeudo Class */
+/* order matter */
+
+
+a:visited {
+    color: purple;
+}
+
+/* by adding a:focus we can use tab key to navigate link */
+a:hover, a:focus {
+    /* opacity the arrow element */
+    color: hsl(210, 100%, 56%, 0.8);
+    /* opac the text */
+    opacity: 0.7; 
+    background: gold;
+}
+
+a:active {
+    color: red;
 }
