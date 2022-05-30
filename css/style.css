@@ -1,45 +1,49 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 
 body {
-    padding: 10%;
+    padding: 1% 10%;
     font-size: 2rem;
     font-family: 'Lato', sans-serif;
 }
 
-
-/* styling in anchor  */
-/* default style no need to write */
-
-
-a {
-    text-decoration: none;
-    cursor: pointer;
-    color: blue;
+ol {
+    list-style-type: decimal-leading-zero;
+    /* to outdent use to amtch content to heading not number */
+    padding: 0;
 }
 
-/* to make Underline color also comment out the above element to work */
-a {
-    color: steelblue;
+ul {
+    list-style-type: square;
+    text-align: center;
+/* to center bullet points */
+    list-style-position: inside;
+    color: blueviolet;
+    line-height: 1.6;
+    /* to give image bullet points */
+    /* list-style-image: url(../images/omp.png); */
+
+    /* we can also style like this */
+    /* list-style: square url("..image"); */
+
 }
 
+/* To overwrite list directly */
 
-/* psyeudo Class */
-/* order matter */
-
-
-a:visited {
-    color: purple;
-}
-
-/* by adding a:focus we can use tab key to navigate link */
-a:hover, a:focus {
-    /* opacity the arrow element */
-    color: hsl(210, 100%, 56%, 0.8);
-    /* opac the text */
-    opacity: 0.7; 
-    background: gold;
-}
-
-a:active {
+/* li {
     color: red;
+} */
+
+/* for specific order list psyudo class */
+
+ul li:nth-child(even) {
+    color: red;
+}
+
+/* psyeudo element */
+
+ul li::marker {
+    color: black;
+    font-family: fantasy;
+    font-size: 1em;
+    content: "only $5 >> ";
 }
