@@ -29,7 +29,8 @@ body {
     /* flex-wrap: wrap; */
 
     /* instead of flex wrap and direction we can use flow */
-    flex-flow: row wrap;
+    /* flex-flow: row wrap; */
+    flex-flow: row nowrap;
 
     /* to align row */
     align-content: space-evenly;
@@ -37,7 +38,7 @@ body {
 
 .box {
     line-height: 3rem;
-    min-width: 100px;
+    /* min-width: 100px; */
     /* min-height: 100px; */
     height: 100px;
     background-color: black;
@@ -48,7 +49,19 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+/* to give box look */
+    flex-basis: 100px;
+    /* flex-grow: 1; */
+    flex-shrink: 1;
 }
+
+/* not exactly doubling but giving whatever space left cause flexbasisi is 100px */
+.box:nth-child(2) {
+    /* flex-grow: 2; */
+    flex-shrink: 2;
+}
+
+
 
 
 
