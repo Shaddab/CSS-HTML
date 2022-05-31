@@ -34,8 +34,8 @@ body {
     padding: 1rem;
 }
 
- /* by default position is static */
- /* to take something off the page use -ve value */
+/* by default position is static */
+/* to take something off the page use -ve value */
 
 .absolute {
     background-color: #00f;
@@ -43,7 +43,7 @@ body {
     /* no need as the parent by default is zero */
     top: 0;
     left: 0;
-/* to change hierchy of div default is 0 */
+    /* to change hierchy of div default is 0 */
     /* z-index: 1; */
 }
 
@@ -77,11 +77,20 @@ section {
     height: 100vh;
 }
 
-.blue {background-color: blue;}
-.red {background-color: red;}
-.green {background-color: green;}
+.blue {
+    background-color: blue;
+}
 
-header, footer {
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}
+
+header,
+footer {
     color: #fff;
     text-align: center;
     height: 100px;
@@ -117,4 +126,3 @@ a:visited {
     left: 0;
     z-index: 1;
 }
-
