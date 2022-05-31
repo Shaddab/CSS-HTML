@@ -6,115 +6,49 @@
 
 body {
     font-family: 'Courier New', Courier, monospace;
-    font-size: 1.5rem;
-    min-height: 200vh;
+    min-height: 100vh;
+    padding: 20px;
 }
 
-.outer-container {
-    border: 3px dashed #000;
-    width: 75vw;
-    height: 85vh;
-    margin: 40px auto;
-    position: relative;
-}
+/* flex right, center or left to aligh relative to container */
 
-/* Relative container */
+.container {
+    max-width: 800px;
+    min-height: 400px;
+    margin-inline: auto;
+    border: 1px solid black;
+    display: flex;
+    gap: 1rem;
+    /* pass argument space around, space between */
+    justify-content: space-evenly;
 
-.inner-container {
-    border: 2px solid #00f;
-    width: 40vw;
-    height: 50vh;
-    margin: 200px auto;
+    align-items: center;
+    /* can apply column */
+    /* flex-direction: row; */
+    /* for small screen to wrap box like overflow */
+    /* flex-wrap: wrap; */
+
+    /* instead of flex wrap and direction we can use flow */
+    flex-flow: row wrap;
+
+    /* to align row */
+    align-content: space-evenly;
 }
 
 .box {
-    width: 150px;
-    height: 150px;
-    color: #fff;
-    padding: 1rem;
-}
-
- /* by default position is static */
- /* to take something off the page use -ve value */
-
-.absolute {
-    background-color: #00f;
-    position: absolute;
-    /* no need as the parent by default is zero */
-    top: 0;
-    left: 0;
-/* to change hierchy of div default is 0 */
-    /* z-index: 1; */
-}
-
-/* relative to class */
-.relative {
-    background-color: red;
-    position: relative;
-    top: 300px;
-    left: 100px;
-}
-
-/* never change position while scrolling */
-.fixed {
-    background-color: green;
-    position: fixed;
-    top: 100px;
-}
-
-/* stick until the container reaches */
-
-.sticky {
-    background-color: #000;
-    position: sticky;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-section {
-    height: 100vh;
-}
-
-.blue {background-color: blue;}
-.red {background-color: red;}
-.green {background-color: green;}
-
-header, footer {
-    color: #fff;
-    text-align: center;
+    line-height: 3rem;
+    min-width: 100px;
+    /* min-height: 100px; */
     height: 100px;
-    /* font-size: 5rem; */
-}
-
-header {
-    position: sticky;
-    top: 0;
-    font-size: 5rem;
-}
-
-footer {
     background-color: black;
-    /* position: fixed; */
-    position: sticky;
-    bottom: 0;
-    /* width: 100%; */
-    font-size: 3rem;
+    color: white;
+    font-size: 2rem;
+    padding: 0.5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-a:visited {
-    color: #fff;
-}
 
-.social {
-    background-color: royalblue;
-    color: #fff;
-    font-size: inherit;
-    padding: 1rem;
-    position: fixed;
-    top: 30%;
-    left: 0;
-    z-index: 1;
-}
 
