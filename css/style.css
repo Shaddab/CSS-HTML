@@ -7,63 +7,87 @@
 body {
     font-family: 'Courier New', Courier, monospace;
     min-height: 100vh;
-    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-auto-rows: 50px auto 50px;
+    grid-template-areas:
+        "hd hd hd hd hd hd hd hd"
+        "mn mn mn mn mn mn sb sb"
+        "ft ft ft ft ft ft ft ft";
+        column-gap: 0.5rem;
+        
 }
 
-/* flex right, center or left to aligh relative to container */
-
-.container {
-    max-width: 800px;
-    min-height: 400px;
-    margin-inline: auto;
-    border: 1px solid black;
-    display: flex;
-    gap: 1rem;
-    /* pass argument space around, space between */
-    justify-content: space-evenly;
-
-    align-items: center;
-    /* can apply column */
-    /* flex-direction: row; */
-    /* for small screen to wrap box like overflow */
-    /* flex-wrap: wrap; */
-
-    /* instead of flex wrap and direction we can use flow */
-    /* flex-flow: row wrap; */
-    flex-flow: row nowrap;
-
-    /* to align row */
-    align-content: space-evenly;
+.el {
+    background-color: rebeccapurple;
+    color: white;
+    display: grid;
+    place-content: center;
 }
+
+.header {
+    grid-area: hd;
+}
+
+.sidebar {
+    grid-area: sb;
+    background-color: blue;
+}
+
+.footer {
+    grid-area: ft;
+}
+
+
 
 .box {
-    line-height: 3rem;
-    /* min-width: 100px; */
-    /* min-height: 100px; */
-    height: 100px;
     background-color: black;
     color: white;
     font-size: 2rem;
-    padding: 0.5rem;
+    padding: 05.rem;
+}
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.container {
+    grid-area: mn;
+    min-height: 400px;
+    display: grid;
+    /* evenly distribute into Column Grid */
+    /* grid-auto-flow: column; */
 
-    /* grow, shrink, basis */
-    flex: 1 1 150px;
+    /* we can use fr fraction unit for grids */
+    /* grid-template-columns: 200px 1fr 1fr; */
+
+    /* first column 1fr 2 cloumn is 2fr then repeat 3 column is 1fr and 4 column is 2fr */
+    grid-template-columns: repeat(2, 1fr 2fr);
     
+    /* grid-auto-rows: 200px; */
+    grid-auto-rows: minmax(150px, auto);
+    gap: 1rem;
+    /* row-gap: 1em; */
+    /* column-gap: 1em; */
 }
 
-/* not exactly doubling but giving whatever space left cause flexbasisi is 100px */
+.box:first-child {
+    background-color: darkcyan;
+    /* grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3; */
+
+    /* alternate way */
+    grid-column: 1/4;
+    grid-row: 1/3;
+
+    /* nesting */
+    display: grid;
+    /* align-content: center;
+    justify-content: center; */
+    /* alternate way */
+    place-content: center; 
+}
+
 .box:nth-child(2) {
-    /* flex-grow: 2; */
-    flex-shrink: 2 2 150px;
-    /* use 0 to default or -1 to put in 1st position */
-    order: 4;
+    background-color: purple;
+    grid-column: 1/5;
+    grid-row: 3/4;
 }
-
-
-
-
-
