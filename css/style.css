@@ -49,16 +49,18 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-/* to give box look */
-    flex-basis: 100px;
-    /* flex-grow: 1; */
-    flex-shrink: 1;
+
+    /* grow, shrink, basis */
+    flex: 1 1 150px;
+    
 }
 
 /* not exactly doubling but giving whatever space left cause flexbasisi is 100px */
 .box:nth-child(2) {
     /* flex-grow: 2; */
-    flex-shrink: 2;
+    flex-shrink: 2 2 150px;
+    /* use 0 to default or -1 to put in 1st position */
+    order: 4;
 }
 
 
